@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Passarinho
+comment1.params=
+comment1.target=java.lang.String\ printMigration()
+comment2.params=
+comment2.target=int\ getId()
+comment3.params=id
+comment3.target=void\ setId(int)
+comment4.params=
+comment4.target=java.lang.String\ getSpecies()
+comment5.params=species
+comment5.target=void\ setSpecies(java.lang.String)
+comment6.params=
+comment6.target=java.math.BigDecimal\ getWeight()
+comment7.params=weight
+comment7.target=void\ setWeight(java.math.BigDecimal)
+comment8.params=
+comment8.target=java.util.Date\ getMigration()
+comment9.params=migration
+comment9.target=void\ setMigration(java.util.Date)
+numComments=10

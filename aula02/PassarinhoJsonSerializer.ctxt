@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=PassarinhoJsonSerializer
+comment1.params=lista
+comment1.target=java.lang.String\ toJson(java.util.List)
+comment2.params=json
+comment2.target=java.util.List\ fromJson(java.lang.String)
+comment3.params=p
+comment3.target=java.lang.String\ toJson(Passarinho)
+comment4.params=json
+comment4.target=Passarinho\ fromJsonSingle(java.lang.String)
+numComments=5
