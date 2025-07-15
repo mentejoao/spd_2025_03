@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViveiroController">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="adicionarViveiroButton" layoutX="156.0" layoutY="334.0" mnemonicParsing="false" onAction="#onAdicionarViveiroButtonAction" text="Adicionar" />
+                        <Label layoutX="159.0" layoutY="50.0" text="Id" />
+                        <Label layoutX="158.0" layoutY="85.0" text="Nome" />
+                        <Label layoutX="158.0" layoutY="119.0" text="Localização" />
+                        <Label layoutX="159.0" layoutY="154.0" text="Capacidade Máxima" />
+                        <Label layoutX="159.0" layoutY="189.0" text="Área (m²)" />
+                        <Label layoutX="159.0" layoutY="224.0" text="Data de Criação" />
+                        <Label layoutX="159.0" layoutY="259.0" text="Responsável" />
+                        <Label layoutX="159.0" layoutY="294.0" text="Tipo de Viveiro" />
+                        <TextField fx:id="idViveiroField" disable="true" editable="false" layoutX="339.0" layoutY="45.0" />
+                        <TextField fx:id="nomeViveiroField" disable="true" layoutX="339.0" layoutY="80.0" />
+                        <TextField fx:id="localizacaoField" disable="true" layoutX="339.0" layoutY="114.0" />
+                        <TextField fx:id="capacidadeField" disable="true" layoutX="339.0" layoutY="149.0" />
+                        <TextField fx:id="areaField" disable="true" layoutX="339.0" layoutY="184.0" />
+                        <TextField fx:id="dataCriacaoField" disable="true" layoutX="339.0" layoutY="219.0" />
+                        <TextField fx:id="responsavelField" disable="true" layoutX="339.0" layoutY="254.0" />
+                        <TextField fx:id="tipoViveiroField" disable="true" layoutX="339.0" layoutY="289.0" />
+                        <Button fx:id="atualizarViveiroButton" disable="true" layoutX="237.0" layoutY="334.0" mnemonicParsing="false" onAction="#onAtualizarViveiroButtonAction" text="Atualizar" />
+                        <Button fx:id="deletarViveiroButton" disable="true" layoutX="313.0" layoutY="334.0" mnemonicParsing="false" onAction="#onDeletarViveiroButtonAction" text="Deletar" />
+                        <Button fx:id="cancelarViveiroButton" disable="true" layoutX="382.0" layoutY="334.0" mnemonicParsing="false" onAction="#onCancelarViveiroButtonAction" text="Cancelar" />
+                        <Button fx:id="salvarViveiroButton" disable="true" layoutX="457.0" layoutY="334.0" mnemonicParsing="false" onAction="#onSalvarViveiroButtonAction" text="Salvar" />
+                        <Label layoutX="290.0" layoutY="8.0" text="Cadastro de Viveiro">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="164.0" prefWidth="445.0">
+               <children>
+                  <TableView fx:id="tabelaViveiro" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="idViveiroCol" editable="false" prefWidth="50.0" text="Id" />
+                        <TableColumn fx:id="nomeViveiroCol" prefWidth="120.0" text="Nome" />
+                        <TableColumn fx:id="localizacaoCol" prefWidth="120.0" text="Localização" />
+                        <TableColumn fx:id="capacidadeCol" prefWidth="100.0" text="Capacidade" />
+                        <TableColumn fx:id="areaCol" prefWidth="80.0" text="Área (m²)" />
+                        <TableColumn fx:id="dataCriacaoCol" prefWidth="100.0" text="Data Criação" />
+                        <TableColumn fx:id="responsavelCol" prefWidth="120.0" text="Responsável" />
+                        <TableColumn fx:id="tipoViveiroCol" prefWidth="100.0" text="Tipo" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
