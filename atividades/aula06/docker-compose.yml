@@ -1,0 +1,38 @@
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: passarinho-mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: passarinho_db
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - passarinho-network
+
+  # Spring Boot Application
+  app:
+    build: .
+    container_name: passarinho-app
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://admin:password123@mongodb:27017/passarinho_db?authSource=admin
+      SPRING_DATA_MONGODB_DATABASE: passarinho_db
+    depends_on:
+      - mongodb
+    networks:
+      - passarinho-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  passarinho-network:
+    driver: bridge
